@@ -1,11 +1,14 @@
 import React from 'react';
 import Layout from './components/Layout';
-import GloblaStyles from './styles/GloblaStyles';
+
+import GlobalStyles from './styles/GlobalStyles';
+
 function App() {
   return (
     <>
-        <Layout />
-        <GloblaStyles />
+      <Layout />
+      
+      <GlobalStyles />
     </>
   );
 }
