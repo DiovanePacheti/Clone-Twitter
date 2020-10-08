@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProfilePage from '../ProfilePage';
 
 import {
@@ -14,6 +14,8 @@ import {
 } from './styles';
 
 const Main:React.FC = () =>{
+
+    const [acti, setActi ] = useState<boolean>(false)
     return(
         <Container>
             <Header>
@@ -27,10 +29,10 @@ const Main:React.FC = () =>{
             </Header>
             <ProfilePage /> 
             <BottomMenu>
-                <HomeIcon className="active"/>
-                <SearchIcon />
-                <BellIcon />
-                <EmailIcon />
+                <HomeIcon className="acti" onClick={() =>{setActi(true)}}/>
+                <SearchIcon className="acti" onClick={() =>{setActi(true)}} />
+                <BellIcon className="acti" onClick={() =>{setActi(true)}}/>
+                <EmailIcon className="acti" onClick={() =>{setActi(true)}}/>
             </BottomMenu>
         </Container>
     )
